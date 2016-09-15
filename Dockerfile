@@ -13,5 +13,6 @@ RUN tar -xzvf /phoenix.tgz
 RUN mv /phoenix-${PHOENIX_VER}-bin /phoenix
 RUN cp /phoenix/phoenix-${PHOENIX_VER}-server.jar /hbase/lib
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /root/.bashrc
+ADD conf /hbase/conf
 ADD scripts /scripts
 CMD sh /scripts/start.sh
