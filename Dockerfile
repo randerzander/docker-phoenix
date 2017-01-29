@@ -1,9 +1,9 @@
 FROM base
-ARG HBASE_URL=https://archive.apache.org/dist/hbase/1.1.7/hbase-1.1.7-bin.tar.gz
-ARG PHOENIX_URL=https://archive.apache.org/dist/phoenix/apache-phoenix-4.8.1-HBase-1.1/bin/apache-phoenix-4.8.1-HBase-1.1-bin.tar.gz
+ARG HBASE_URL=https://archive.apache.org/dist/hbase/1.2.4/hbase-1.2.4-bin.tar.gz
+ARG PHOENIX_URL=https://archive.apache.org/dist/phoenix/apache-phoenix-4.9.0-HBase-1.2/bin/apache-phoenix-4.9.0-HBase-1.2-bin.tar.gz
 
-ARG HBASE_VER=hbase-1.1.7
-ARG PHOENIX_VER=4.8.1-HBase-1.1
+ARG HBASE_VER=hbase-1.2.4
+ARG PHOENIX_VER=4.9.0-HBase-1.2
 
 # Setup HBase binaries
 RUN wget -nv ${HBASE_URL} -O /hbase.tgz
