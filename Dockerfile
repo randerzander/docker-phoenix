@@ -1,4 +1,11 @@
-FROM base
+FROM centos
+
+RUN yum install -y java-1.8.0-openjdk-devel
+RUN yum install -y wget
+RUN yum install -y unzip
+RUN yum install -y net-tools
+RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /root/.bashrc
+
 ARG HBASE_URL=https://archive.apache.org/dist/hbase/1.2.4/hbase-1.2.4-bin.tar.gz
 ARG PHOENIX_URL=https://archive.apache.org/dist/phoenix/apache-phoenix-4.9.0-HBase-1.2/bin/apache-phoenix-4.9.0-HBase-1.2-bin.tar.gz
 
