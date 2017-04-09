@@ -6,11 +6,11 @@ RUN yum install -y unzip
 RUN yum install -y net-tools
 RUN echo "export JAVA_HOME=/usr/lib/jvm/java" >> /root/.bashrc
 
-ARG HBASE_URL=https://archive.apache.org/dist/hbase/1.2.4/hbase-1.2.4-bin.tar.gz
-ARG PHOENIX_URL=https://archive.apache.org/dist/phoenix/apache-phoenix-4.9.0-HBase-1.2/bin/apache-phoenix-4.9.0-HBase-1.2-bin.tar.gz
+ARG HBASE_URL=https://archive.apache.org/dist/hbase/1.2.5/hbase-1.2.5-bin.tar.gz
+ARG PHOENIX_URL=https://archive.apache.org/dist/phoenix/apache-phoenix-4.10.0-HBase-1.2/bin/apache-phoenix-4.10.0-HBase-1.2-bin.tar.gz
 
-ARG HBASE_VER=hbase-1.2.4
-ARG PHOENIX_VER=4.9.0-HBase-1.2
+ARG HBASE_VER=hbase-1.2.5
+ARG PHOENIX_VER=4.10.0-HBase-1.2
 
 # Setup HBase binaries
 RUN wget -nv ${HBASE_URL} -O /hbase.tgz
